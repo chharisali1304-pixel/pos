@@ -6,11 +6,15 @@ let usernameInput = document.querySelector(".username-input");
 let passwordInput = document.querySelector(".password-input");
 let usersave ;
 let passsave ;
-
+  localStorage.setItem("inputuser",usernameInput.value);
+  localStorage.setItem("inputpass",passwordInput.value);
 
 
 
 //let register = document.querySelector(".login-btn2");
+if(localStorage.getItem("inputuser") !== "" && localStorage.getItem("inputpass") !== ""){
+
+
 
 login.addEventListener("click", () => {
   
@@ -22,11 +26,12 @@ login.addEventListener("click", () => {
       login.addEventListener("click", () => {
        
        if(usersave === localStorage.getItem("inputuser") && passsave === localStorage.getItem("inputpass"))
-        
-        {
-           console.log("logjj");
+       
+        { 
          window.location.href = "POS.html";
-       }
+         
+         }
+      
        else if(usernameInput.value === "" && passwordInput.value === ""){
      alert("Please enter your username and password.");
    }
@@ -71,4 +76,8 @@ register.addEventListener("click", () => {
            })
         }
 });
+}
+else{
+ window.location.href = "POS.html";
+}
 
