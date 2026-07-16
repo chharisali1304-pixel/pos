@@ -12,7 +12,7 @@ let passsave ;
 
 
 //let register = document.querySelector(".login-btn2");
-if(localStorage.getItem("inputuser") !== "" && localStorage.getItem("inputpass") !== ""){
+if(localStorage.getItem("inputuser") !== " " && localStorage.getItem("inputpass") !== " "){
 
 
 

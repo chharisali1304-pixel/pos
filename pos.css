@@ -1,7 +1,10 @@
 body{
     font-family: Arial, sans-serif;
-   
+  
     padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
 }
 /* search css */
 .search-container {
@@ -199,6 +202,9 @@ body{
     height: 80%;
     border-radius: 50%;
 }
+.siz{
+    width: 60%;
+}
 .side2-bar {
     position: fixed;
     top: 0;
@@ -237,7 +243,7 @@ body{
 .bill{
     display: flex;
     flex-direction: column;
-    height: 10%;
+    height: 20%;
 }
 .total{    
     width: 80%;
@@ -258,6 +264,7 @@ body{
 .addcart{
     display: flex;
     flex-direction: column;
+    align-items: top;
     justify-content: top;
     height: 80%;
 }
