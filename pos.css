@@ -245,6 +245,13 @@ h1,h2,h3,h4,h5,h6{
     flex-direction: column;
     height: 20%;
 }
+.del:hover{
+  transform: scale(1.1);
+}
+.subtotal{
+    display: flex;
+    justify-content: space-between;
+}
 .total{    
     width: 80%;
 }
