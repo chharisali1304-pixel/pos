@@ -22,17 +22,17 @@ buttons.forEach((button,index) => {
         let currentprice = Number(pricecount[index].innerText);
          
          pricetotal.innerHTML = currenttotal + currentprice;
-         addcart.addEventListener("click",(e,index) => {
-    
-         pricetotal.innerHTML =pricetotal.innerHTML - pricecount[index];
-        
-});
     });
     
 });
 addcart.addEventListener("click",(e,index) => {
     if (e.target.classList.contains("del")) {
         e.target.closest(".card").remove();
+        let currenttotal =  Number(pricetotal.innerText);
+        let currentprice = Number(pricecount[index].innerText);
+         
+        pricetotal.innerHTML = currenttotal - currentprice;
     }
+     
 });
 

@@ -275,3 +275,23 @@ h1,h2,h3,h4,h5,h6{
     justify-content: top;
     height: 80%;
 }
+.pay{
+    margin-top: 20px;
+    width: 80%;
+    height: 5%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 900;
+    background-color: #004085;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+.pay:hover{
+    transform: scale(1.051);
+    background-color: #0056b3;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+.pay:active{
+    background-color:#14467a;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
