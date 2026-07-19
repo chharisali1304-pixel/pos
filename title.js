@@ -83,7 +83,9 @@ let arr = Array.from(titlebar);
 let logout = document.querySelector(".siz");
 logout.addEventListener("click" ,() =>{
   console.log("ygyg")
+ 
   window.location.href = "login.html";
-  localStorage.clear;
-
+  
+  window.localStorage.clear();
+ 
 })
