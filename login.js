@@ -6,16 +6,15 @@ let emailInput = document.querySelector(".email-input");
 let usernameInput = document.querySelector(".username-input");
 let passwordInput = document.querySelector(".password-input");
 
-let usersave ;
-let passsave ;
+let  usersave ="";
+let passsave ="";
 
-  localStorage.setItem("inputuser",usernameInput.value);
-  localStorage.setItem("inputpass",passwordInput.value);
 
+console.log( localStorage.getItem("inputuser"));
 
 //let register = document.querySelector(".login-btn2");
- if(localStorage.getItem("inputuser") !== " " && localStorage.getItem("inputpass") !== " "){
-
+ if(localStorage.getItem("inputuser") === "" && localStorage.getItem("inputpass") === ""){
+ 
 
 register.addEventListener("click", () => {
   title.innerHTML = "Register";
@@ -40,6 +39,8 @@ register.addEventListener("click", () => {
                 localStorage.setItem("inputpass",passwordInput.value);
                 usersave = usernameInput.value;
                 passsave = passwordInput.value;
+                localStorage.setItem("user",usernameInput.value);
+                localStorage.setItem("pass",passwordInput.value);
                   console.log(usersave)
                   console.log(passsave)
                 usernameInput.value = ""; 
@@ -76,9 +77,7 @@ login.addEventListener("click", () => {
      })
    
 });
-
-
 }
 else{
  window.location.href = "POS.html";
-}
+ }

@@ -85,7 +85,6 @@ logout.addEventListener("click" ,() =>{
   console.log("ygyg")
  
   window.location.href = "login.html";
-  
-  window.localStorage.clear();
- 
+  window.localStorage.setItem("inputuser","");
+  window.localStorage.setItem("inputpass","");
 })

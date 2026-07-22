@@ -14,7 +14,7 @@ buttons.forEach((button,index) => {
          addcart.innerHTML += `
         <div class="card">
             <h4>${name} </h4>
-            <h3>${price}</h3>
+            <h3><span>${price}</span>$</h3>
             <img src="del.png" alt="del" class="del">
             <hr class="hr">
         </div>`;
@@ -22,17 +22,23 @@ buttons.forEach((button,index) => {
         let currentprice = Number(pricecount[index].innerText);
          
          pricetotal.innerHTML = currenttotal + currentprice;
+        
     });
     
 });
-addcart.addEventListener("click",(e,index) => {
+                                        // addeventlistener delete add to cart
+ addcart.addEventListener("click",(e) => {
     if (e.target.classList.contains("del")) {
         e.target.closest(".card").remove();
-        let currenttotal =  Number(pricetotal.innerText);
-        let currentprice = Number(pricecount[index].innerText);
-         
-        pricetotal.innerHTML = currenttotal - currentprice;
+       let card = e.target.closest(".card");
+
+       let currentPrice = Number(card.querySelector("span").innerText);
+
+       let currentTotal = Number(pricetotal.innerText);
+
+        pricetotal.innerText = currentTotal - currentPrice;
     }
      
 });
+
 
