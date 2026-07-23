@@ -64,7 +64,7 @@ login.addEventListener("click", () => {
   console.log("log");
       login.addEventListener("click", () => {
        
-       if(usersave === localStorage.getItem("inputuser") && passsave === localStorage.getItem("inputpass"))
+       if(localStorage.getItem("user") === usernameInput.value &&  localStorage.getItem("pass") ===  passwordInput.value)
        
         { 
          window.location.href = "POS.html";
