@@ -3,6 +3,8 @@ let register = document.querySelector(".login-btn1");
 let login = document.querySelector(".login-btn2");
 let title = document.querySelector(".login-header h1");
 let emailInput = document.querySelector(".email-input");
+let emaillogo = document.querySelector(".email-logo");
+let inputblock = document.querySelector(".input-block");
 let usernameInput = document.querySelector(".username-input");
 let passwordInput = document.querySelector(".password-input");
 
@@ -20,6 +22,7 @@ register.addEventListener("click", () => {
   title.innerHTML = "Register";
    console.log("reg")
  emailInput.style.display = "block";
+ emaillogo.style.display = "block";
   register.classList.remove("login-btn2");
   login.classList.add("login-btn2");
   if(emailInput.value === "" && usernameInput.value === "" && passwordInput.value === ""){
@@ -33,6 +36,8 @@ register.addEventListener("click", () => {
                  console.log("log3")
                 title.innerHTML = "Login";
                 emailInput.style.display = "none";
+                emaillogo.style.display = "none";
+                
                 register.classList.add("login-btn2");
                 login.classList.remove("login-btn2");
                 localStorage.setItem("inputuser",usernameInput.value);
@@ -59,6 +64,7 @@ login.addEventListener("click", () => {
   
   title.innerHTML = "Login";
   emailInput.style.display = "none";
+  emaillogo.style.display = "none";
   register.classList.add("login-btn2");
   login.classList.remove("login-btn2");
   console.log("log");

@@ -419,7 +419,7 @@
                        <!-- <div class="card">
                          
                           <h4>${product.name}</h4>
-                          <h3>${product.price}.00</h3>
+                          <h3>${product.price}</h3>
                           <hr class="hr">
             
                         </div>  -->
@@ -441,12 +441,43 @@
 
         </div>
     </section>
-    <section>
+    <section class="pay-bar">
+      <div>
+        <div class="payment-method">
+          <button class="cash-btn">CASH</button>
+          <button class="card-btn">CARD</button>
+       </div> 
+        <hr>
+      </div>
 
+      <div>
+        Customer Name:
+        <input type="text" placeholder="Customer" class="customer-input">
+      </div>
+       <div>
+        Price Received:
+        <input type="text" placeholder="Received" class="customer-input">
+      </div>
+      <div>
+        Products:
+      </div>
+      <div class="receipt">
+        <div>
+           Totalprice:
+        </div>
+        <div>
+           Receive:
+        </div>
+        <div>
+           Return:
+        </div>
+      </div>
+       <button class="pay">PAY</button>
     </section>
     <!--script section-->
      <script src="title.js"></script>
       <script src="cart.js"></script>
+        <script src="payment.js"></script>
 
 </body>
 </html>

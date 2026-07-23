@@ -1,6 +1,6 @@
 body{
     font-family: Arial, sans-serif;
-  
+  background-color: rgba(0, 0, 0, 0.199);
     padding: 0;
 }
 h1,h2,h3,h4,h5,h6{
@@ -294,4 +294,56 @@ h1,h2,h3,h4,h5,h6{
 .pay:active{
     background-color:#14467a;
      box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+/* payment method section  */
+.pay-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 13%;
+    height: 92%;
+    background-color: rgb(206, 199, 206);
+    padding: 20px;
+    margin:30px;
+    border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+     transform: translate(250px);
+   transition: all 0.3s ease-in;
+}
+
+    
+
+.payment-method{
+    display: flex;
+    justify-self: center; 
+    gap: 5px;
+
+  
+}
+
+
+.cash-btn{
+    background-color: #0379f86b;
+    color:white;
+    height: 40px;
+    width:50px;
+    border-radius: 10px;
+}
+.card-btn{
+    height: 40px;
+    width:50px;
+    border-radius: 10px;
+}
+.customer-input{
+    height: 30px;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+.receipt{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 50%;
 }
