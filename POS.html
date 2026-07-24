@@ -442,37 +442,44 @@
         </div>
     </section>
     <section class="pay-bar">
+    <div class="pay-block">
       <div>
         <div class="payment-method">
           <button class="cash-btn">CASH</button>
           <button class="card-btn">CARD</button>
+         
        </div> 
-        <hr>
+       <hr class="hr1">
       </div>
-
-      <div>
-        Customer Name:
-        <input type="text" placeholder="Customer" class="customer-input">
-      </div>
-       <div>
-        Price Received:
-        <input type="text" placeholder="Received" class="customer-input">
-      </div>
-      <div>
-        Products:
-      </div>
-      <div class="receipt">
+      <div class="cash-block">
         <div>
-           Totalprice:
+          Customer Name:
+          <input type="text" placeholder="Customer" class="customer-input">
         </div>
         <div>
-           Receive:
+          Price Received:
+          <input type="text" placeholder="Received" class="customer-input receiveprice">
         </div>
         <div>
-           Return:
+            <div>
+                <button class="confirm-details">confirm details</button>
+            </div>
+          Products:
         </div>
-      </div>
-       <button class="pay">PAY</button>
+        <div class="receipt">
+          <div class="receipt-block">
+             Totalprice: <div class="tot-price">0</div>
+          </div>
+          <div class="receipt-block">
+             Receive: <div class="received">0</div>
+          </div>
+          <div class="receipt-block">
+             Return:  <div class="return">0</div>
+          </div>
+       </div>
+     </div>  
+       <button class="pay pay-cash">PAY</button>
+    </div>    
     </section>
     <!--script section-->
      <script src="title.js"></script>

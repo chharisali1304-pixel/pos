@@ -2,6 +2,7 @@ let buttons = document.querySelectorAll(".plus");
 let addcart = document.querySelector(".addcart");
  let pricecount = document.querySelectorAll("span");
  let pricetotal = document.querySelector(".total-price");
+ 
  console.log(pricecount);
 buttons.forEach((button,index) => {
 
@@ -22,7 +23,8 @@ buttons.forEach((button,index) => {
         let currentprice = Number(pricecount[index].innerText);
          
          pricetotal.innerHTML = currenttotal + currentprice;
-        
+         localStorage.setItem("totalprice" , pricetotal.innerHTML);
+        console.log( localStorage.getItem("totalprice"))
     });
     
 });
@@ -37,6 +39,7 @@ buttons.forEach((button,index) => {
        let currentTotal = Number(pricetotal.innerText);
 
         pricetotal.innerText = currentTotal - currentPrice;
+        localStorage.setItem("totalprice" , pricetotal.innerHTML);
     }
      
 });
