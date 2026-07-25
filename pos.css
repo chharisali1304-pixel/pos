@@ -211,6 +211,9 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+.addcart{
+    overflow: auto;
+}
 .side2-cart{
     display: flex;
     flex-direction: column;
