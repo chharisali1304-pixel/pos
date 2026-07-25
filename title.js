@@ -13,7 +13,8 @@ let arr = Array.from(titlebar);
   longsection.style.display = "none";
   calsection.style.display = "none";
   seisection.style.display = "none";
-
+ rol.style.backgroundColor="#14467a";
+            rol.style.color = "white";
  arr.forEach(titlebar => {
 
     titlebar.addEventListener("click",(e) => {
