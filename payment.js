@@ -14,12 +14,35 @@ let cardblock =  document.querySelector(".card-block");
 let cashblock =  document.querySelector(".cash-block");
 let cashbtn =  document.querySelector(".cash-btn");
 let cardbtn =  document.querySelector(".card-btn");
+let  customername = document.querySelector(".customer-name")
 paybtn.addEventListener("click",() => {
 paybar.style.transform = "translate(0px)";
 totprice.innerText = window.localStorage.getItem("totalprice");
 })
 
 cardblock.style.display = "none";
+
+
+confirmbtn.addEventListener("click",()=>{
+received.innerText =  receiveprice.value;
+console.log(received.innerText);
+returns.innerHTML = received.innerText - totprice.innerText;
+
+
+paycash.addEventListener("click",()=>{
+    
+     received.innerText = 0;
+     totprice.innerText = 0;
+     receiveprice.value = "";
+     customername.value = "";
+     returns.innerHTML = 0;
+     paybar.style.transform = "translate(350px)";
+     alert("PAID");
+      
+ })
+})
+
+
 
 cashbtn.addEventListener("click",()=>{
     cashbtn.style.backgroundColor = "#0379f86b";
@@ -30,6 +53,7 @@ cashbtn.addEventListener("click",()=>{
     cashblock.style.display = "block";
 confirmbtn.addEventListener("click",()=>{
 received.innerText =  receiveprice.value;
+console.log(received.innerText);
 returns.innerHTML = received.innerText - totprice.innerText;
 
 paycash.addEventListener("click",()=>{
@@ -44,6 +68,8 @@ paycash.addEventListener("click",()=>{
  })
 })
  
+
+
  })
  cardbtn.addEventListener("click",()=>{
     
