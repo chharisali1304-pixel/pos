@@ -20,6 +20,7 @@ totprice.innerText = window.localStorage.getItem("totalprice");
 })
 
 cardblock.style.display = "none";
+
 cashbtn.addEventListener("click",()=>{
     cashbtn.style.backgroundColor = "#0379f86b";
      cashbtn.style.color="white";
