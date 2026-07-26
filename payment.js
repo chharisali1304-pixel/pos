@@ -1,23 +1,39 @@
 let paybtn = document.querySelector(".pay");
 let paybar = document.querySelector(".pay-bar");
+
 let receiveprice = document.querySelector(".receiveprice");
 let received = document.querySelector(".received");
+
 let confirmbtn = document.querySelector(".confirm-details");
 let totprice = document.querySelector(".tot-price");
+
 let returns = document.querySelector(".return");
 let paycash = document.querySelector(".pay-cash");
- let holdername = document.querySelector(".holder-name");
-      let cardnumber = document.querySelector(".card-number");
-      let expirydate = document.querySelector(".date");
-      let cvv = document.querySelector(".cvv");
+
+let holdername = document.querySelector(".holder-name");
+let cardnumber = document.querySelector(".card-number");
+let expirydate = document.querySelector(".date");
+let cvv = document.querySelector(".cvv");
+
 let cardblock =  document.querySelector(".card-block");
 let cashblock =  document.querySelector(".cash-block");
+
 let cashbtn =  document.querySelector(".cash-btn");
 let cardbtn =  document.querySelector(".card-btn");
-let  customername = document.querySelector(".customer-name")
+let  customername = document.querySelector(".customer-name");
+
+ window.pricetotal = document.querySelector(".total-price");
+ console.log(pricetotal.innerHTML);
 paybtn.addEventListener("click",() => {
-paybar.style.transform = "translate(0px)";
-totprice.innerText = window.localStorage.getItem("totalprice");
+     console.log(pricetotal.innerHTML);
+    if( pricetotal.innerHTML !== 0)
+    {
+     paybar.style.transform = "translate(0px)";
+     totprice.innerText = window.localStorage.getItem("totalprice");
+    }
+    else{
+        alert("Please Enter Product");
+    }
 })
 
 cardblock.style.display = "none";

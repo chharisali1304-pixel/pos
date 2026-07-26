@@ -404,3 +404,29 @@ h1,h2,h3,h4,h5,h6{
     justify-content: space-between;
     width:90%;
 }
+.add-price{
+    display: flex;
+    justify-content: space-between;
+}
+.minus-btn{
+    background-color: rgba(5, 8, 8, 0.103);
+    height: 20px;
+    width: 22px;
+}
+.plus-btn{
+    background-color: rgba(5, 8, 8, 0.103);
+    height: 20px;
+}
+.product-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+                                                /* history section */
+.history-section{
+    display: flex;
+    justify-content: center;
+}
+.history-thead{
+    margin: 20px 5px 5px 5px;
+}
