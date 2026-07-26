@@ -12,7 +12,7 @@ let historysection =  document.querySelector(".history-section");
     producttitle.style.display = "none";
     rolexsection.style.display = "none";
       historysection.style.display ="flex";
-     historysection.style.justify.content = "center";
+     historysection.style.justify = "center";
   })
 
   sidebarmainbtn.addEventListener("click",()=>{
@@ -24,6 +24,6 @@ let historysection =  document.querySelector(".history-section");
     rolexsection.style.display = "block";
       producttitle.style.margin.top = "2%";
     producttitle.style.display = "flex";
-    producttitle.style.justify.content = "center";
+    producttitle.style.justify = "center";
     producttitle.style.width = "100%";
   })

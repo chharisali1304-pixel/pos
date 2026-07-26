@@ -32,7 +32,7 @@ paybtn.addEventListener("click",() => {
      totprice.innerText = window.localStorage.getItem("totalprice");
     }
     else{
-        alert("Please Enter Product");
+        alert("Please Add Product");
     }
 })
 
