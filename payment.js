@@ -26,7 +26,7 @@ let  customername = document.querySelector(".customer-name");
  console.log(pricetotal.innerHTML);
 paybtn.addEventListener("click",() => {
      console.log(pricetotal.innerHTML);
-    if( pricetotal.innerHTML !== 0)
+    if( pricetotal.innerHTML != 0)
     {
      paybar.style.transform = "translate(0px)";
      totprice.innerText = window.localStorage.getItem("totalprice");
