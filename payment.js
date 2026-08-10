@@ -15,8 +15,9 @@ let cashblock =  document.querySelector(".cash-block");                         
 let cashbtn =  document.querySelector(".cash-btn");                                                                          // cash button
 let cardbtn =  document.querySelector(".card-btn");                                                                         // card button
 let  customername = document.querySelector(".customer-name");                                                              // customer name
-let  payclose = document.querySelector(".pay-close");                                                                  // pay close button
- window.pricetotal = document.querySelector(".total-price");                                                            // total price
+let  payclose = document.querySelector(".pay-close");                                                                     // pay close button
+let historysave = document.querySelector(".history-tr");                                                                 // history save
+ window.pricetotal = document.querySelector(".total-price");                                                           // total price
 
  payclose.addEventListener("click",()=>{                                                                                   // pay close button add event listener
     paybar.style.transform = "translate(550px)";                                                                                   // pay bar transform
@@ -41,7 +42,12 @@ received.innerText =  receiveprice.value;                                       
 returns.innerHTML = received.innerText - totprice.innerText;                                                               // return price inner html
 
 paycash.addEventListener("click",()=>{                                                                        // pay cash button add event listener
-    
+     localStorage.setItem("savehistory", `
+    <td>${customername.value}</td>
+    <td>Cash</td>
+    <td>${received.innerText}</td>
+    <td>${totprice.innerText}</td>`);
+    console.log(localStorage.getItem("savehistory"));
      received.innerText = 0;                                                                                                // received price inner text
      totprice.innerText = 0;                                                                                               // total price inner text
      receiveprice.value = "";                                                                                             // receive price value
@@ -49,10 +55,10 @@ paycash.addEventListener("click",()=>{                                          
      returns.innerHTML = 0;                                                                                             // return price inner html
      paybar.style.transform = "translate(550px)";                                                                      // pay bar transform
      alert("PAID");                                                                                                   // alert paid
-      
+      historysave.innerHTML = window.localStorage.getItem("savehistory");
  })
 })
-
+                                                                 // history save inner html
 cashbtn.addEventListener("click",()=>{                                                                      // cash button add event listener
     cashbtn.style.backgroundColor = "#0379f86b";                                                                        // cash button background color
     cashbtn.style.color="white";                                                                                         // cash button color
@@ -65,14 +71,21 @@ cashbtn.addEventListener("click",()=>{                                          
     returns.innerHTML = received.innerText - totprice.innerText;                                                  // return price inner html
 
 paycash.addEventListener("click",()=>{                                                                    // pay cash button add event listener
-    
-     received.innerText = 0;                                                                                            // received price inner text
-     totprice.innerText = 0;                                                                                           // total price inner text
-     receiveprice.value = 0;                                                                                          // receive price value
-     returns.innerHTML = 0;                                                                                          // return price inner html
-     paybar.style.transform = "translate(550px)";                                                                   // pay bar transform
-     alert("PAID");                                                                                                // alert paid
-      
+     historysave.style.width = "100%";                                                                                              // history save width 100%
+    historysave.style.height = "100%";                                                                                            // history save height 100%
+    historysave.innerHTML += `
+    <td>${customername.value}</td>
+    <td>${totprice.innerText}</td>
+    <td>${received.innerText}</td>
+    <td>${returns.innerHTML}</td>`;
+    console.log(historysave.innerHTML);
+    received.innerText = 0;                                                                                            // received price inner text
+    totprice.innerText = 0;                                                                                           // total price inner text
+    receiveprice.value = 0;                                                                                          // receive price value
+    returns.innerHTML = 0;                                                                                          // return price inner html
+    paybar.style.transform = "translate(550px)";                                                                   // pay bar transform
+    alert("PAID");                
+   
  })
 })
  
