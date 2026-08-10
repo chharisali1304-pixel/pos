@@ -1,13 +1,13 @@
-body{
+body{                                                                                        /* body css manage */
     font-family: Arial, sans-serif;
   background-color: rgba(0, 0, 0, 0.199);
     padding: 0;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6{                                                                          /* heading css manage */
     margin: 0px;
 }
 /* search css */
-.welcome-container {
+.welcome-container {                                                                    /* welcome container css manage */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,27 +15,27 @@ h1,h2,h3,h4,h5,h6{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-/* PRODUCT title bar */
-.product-title{
+                                                                                            /* PRODUCT title bar */
+.product-title{                                                                         /* product title css manage */
     margin-top: 2%;
     display: flex;
     justify-content: center;
     width: 100%;
 }
-.product-bar{
+.product-bar{                                                                           /* product bar css manage */
     display: flex;
     justify-content: center;
     width:35%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.title-btn{
+.title-btn{                                                                         /* product title button css manage */
     width: 15%;
     height: 5vh;
     margin-right: 10px;
     border-radius: 40px;
     transition:all 1.5s ease-in-out;
 }
-.title-btn:hover{
+.title-btn:hover{                                                               /* product title button hover css manage */
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
       rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
@@ -45,17 +45,17 @@ h1,h2,h3,h4,h5,h6{
      background-color:#14467a;
    color:white;
 }
-/* rolax css */
-.rolex-section {
+                                                                                                        /* rolax css */
+.rolex-section {                                                                                /* rolax section css manage */
     max-width:100%;
 }
-.rolex {
+.rolex {                                                                                           /* rolex css manage */
    
     text-align: center;
     margin : 3% 20% 0px 20%;
     height: 200vh;
 }
-.rolex-item {
+.rolex-item {                                                                                    /* rolex item css manage */
    
     box-sizing: border-box;
     height: 100%;
@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6{
   
     padding: 20px;
 }
-.rolex-list {
+.rolex-list {                                                                                     /* rolex list css manage */
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
@@ -81,7 +81,7 @@ h1,h2,h3,h4,h5,h6{
     text-decoration: none;
     margin: 0px;
 }
-.rolex-container {
+.rolex-container {                                                                              /* rolex container css manage */
     
     display: flex;
     flex-direction: column;
@@ -89,13 +89,13 @@ h1,h2,h3,h4,h5,h6{
     height: 100%;
     width: 100%;
 }
-.rolex img {
+.rolex img {                                                                                    /* rolex image css manage */
     max-width: 95%;
     max-height: 75%;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
-/* left side bar */
-.side-bar {
+                                                                                                  /* left side bar */
+.side-bar {                                                                                 /* left side bar css manage */
     position: fixed;
     top: 0;
     left: 0;
@@ -117,7 +117,7 @@ h1,h2,h3,h4,h5,h6{
           rgba(0, 0, 0, 0.109) 0px 32px 16px;
      
 }
-.side-bar-title {
+.side-bar-title {                                                                       /* left side bar title css manage */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,7 +125,8 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.symbol ,hr{
+.symbol ,hr{                                                                            /* left side bar symbol css manage */
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
@@ -134,20 +135,20 @@ h1,h2,h3,h4,h5,h6{
       
 }
 
-.side-bar-line{
+.side-bar-line{                                                                             /* left side bar line css manage */
     width: 50%;
     height: 1px;
     background-color: #ccc;
     margin: 10px 0;
 }
-.side-bar-container {
+.side-bar-container {                                                                   /* left side bar container css manage */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: top;
     height: 100%;
 }
-.side-bar-content {
+.side-bar-content {                                                                     /* left side bar content css manage */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,7 +156,7 @@ h1,h2,h3,h4,h5,h6{
     height: 100%;
     margin-top: 40px;
 }
-.side-bar-item {
+.side-bar-item {                                                                            /* left side bar item css manage */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,19 +173,19 @@ h1,h2,h3,h4,h5,h6{
     rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     transition:all 0.3s ease-in-out;
 }
-.side-bar-item:hover {
+.side-bar-item:hover {                                                                    /* left side bar item hover css manage */ 
     background-color: #a9c6e4;
     transform: scale(1.05);
 }
-.icon{
+.icon{                                                                                      /* left side bar icon css manage */
     width: 20%;
     height: 80%;
     border-radius: 50%;
 }
-.siz{
+.siz{                                                                                      /* left side bar size css manage */
     width: 60%;
 }
-.side2-bar {
+.side2-bar {                                                                                /* right side bar css manage */
     position: fixed;
     top: 0;
     right: 0;
@@ -196,14 +197,14 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 10px;
    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
-.side2-bar-container {
+.side2-bar-container {                                                                  /* right side bar container css manage */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: top;
     height: 100%;
 }
-.side2-bar-title {
+.side2-bar-title {                                                                          /* right side bar title css manage */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,10 +212,10 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
-.addcart{
+.addcart{                                                                                   /* right side bar add to cart css manage */
     overflow: auto;
 }
-.side2-cart{
+.side2-cart{                                                                                    /* right side bar cart css manage */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -222,42 +223,43 @@ h1,h2,h3,h4,h5,h6{
     height: 80%;
     margin-top:30px;
 }
-.bill{
+.bill{                                                                                          /* right side bar bill css manage */
     display: flex;
     flex-direction: column;
     height: 20%;
 }
-.del:hover{
+.del:hover{                                                                              /* right side bar delete button hover css manage */
+    
   transform: scale(1.1);
 }
-.subtotal{
+.subtotal{                                                                                   /* right side bar subtotal css manage */
     display: flex;
     justify-content: space-between;
 }
-.total{    
+.total{                                                                                        /* right side bar total css manage */
     width: 80%;
 }
-.hr{
+.hr{                                                                                            /* right side bar hr css manage */
     height: 0px;
     width: 100%;
 }
-.hr2{
+.hr2{                                                                                          /* right side bar hr2 css manage */
     height: 0px;
     width: 80%;
 }
-.plus{
+.plus{                                                                                      /* right side bar plus button css manage */
     width: 30%;
     height: 20%;
     border-radius:10px;
 }
-.addcart{
+.addcart{                                                                                   /* right side bar add to cart css manage */
     display: flex;
     flex-direction: column;
     align-items: top;
     justify-content: top;
     height: 80%;
 }
-.pay{
+.pay{                                                                                       /* right side bar pay button css manage */
     margin-top: 20px;
     width: 80%;
     height: 5%;
@@ -269,17 +271,17 @@ h1,h2,h3,h4,h5,h6{
      cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
-.pay:hover{
+.pay:hover{                                                                                /* right side bar pay button hover css manage */
     transform: scale(1.051);
     background-color: #0056b3;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
-.pay:active{
+.pay:active{                                                                              /* right side bar pay button active css manage */
     background-color:#14467a;
      box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
-/* payment method section  */
-.pay-bar {
+                                                                                                        /* payment method section  */
+.pay-bar {                                                                                              /* payment bar css manage */
    
     position: fixed;
     top: 0;
@@ -294,7 +296,7 @@ h1,h2,h3,h4,h5,h6{
      transform: translate(350px);
    transition: all 0.3s ease-in;
 }
-.cash-block{
+.cash-block{                                                                                            /* cash block css manage */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -303,40 +305,34 @@ h1,h2,h3,h4,h5,h6{
     width:80%;
     
 }
-.hr1{
+.hr1{                                                                                               /* right side bar hr1 css manage */
     height: 0px;
     width:100%;
 }
-    .pay-block{
+    .pay-block{                                                                                         /* pay block css manage */
          display: flex;
     flex-direction: column;
     align-items: center;
     height: 80%;
-    
     }
-
-.payment-method{
+.payment-method{                                                                                     /* payment method css manage */
     display: flex;
     justify-self: center; 
-    gap: 5px;
-
-  
+    gap: 5px; 
 }
-
-
-.cash-btn{
+.cash-btn{                                                                                            /* cash button css manage */
     background-color: #0379f86b;
     color:white;
     height: 40px;
     width:50px;
     border-radius: 10px;
 }
-.card-btn{
+.card-btn{                                                                                           /* card button css manage */
     height: 40px;
     width:50px;
     border-radius: 10px;
 }
-.customer-input{
+.customer-input{                                                                                    /* customer input css manage */
     height: 30px;
     margin-top: 10px;
      margin-bottom: 10px;
@@ -344,7 +340,7 @@ h1,h2,h3,h4,h5,h6{
     border: 1px solid green;
     border-radius: 5px;
 }
-.receipt{
+.receipt{                                                                                               /* receipt css manage */
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -352,12 +348,12 @@ h1,h2,h3,h4,h5,h6{
     height: 50%;
     width: 100%;
 }
-.receipt-block{
+.receipt-block{                                                                                       /* receipt block css manage */
     display: flex;
     justify-content: space-between;
     width: 80%;
 }
-.confirm-details{
+.confirm-details{                                                                                  /* confirm details button css manage */
     width:100%;
     height: 30px;
     margin-top: 10px;
@@ -371,10 +367,10 @@ h1,h2,h3,h4,h5,h6{
         rgba(15, 39, 56, 0.1) 0px 20px,
          rgba(15, 39, 56, 0.05) 0px 25px;
 }
-.confirm-details:active{
+.confirm-details:active{                                                                        /* confirm details button active css manage */
      background-color: rgba(104, 143, 170, 0.888);
 }
-.card-block{
+.card-block{                                                                                            /* card block css manage */
      display: flex;
     flex-direction: column;
     justify-content: center;
@@ -383,50 +379,47 @@ h1,h2,h3,h4,h5,h6{
     width:80%;
     
 }
-.card-logos{
+.card-logos{                                                                                            /* card logos css manage */
     height: 50px;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
 }
-.expiry-date{
+.expiry-date{                                                                                          /* expiry date css manage */
     width :45%;
 }
-.ex-cv{
+.ex-cv{                                                                                            /* expiry date and cvv css manage */
     display: flex;
     justify-content:left;
     gap: 10px;
     width:80%;
 }
-.ex-input{
+.ex-input{                                                                                          /* expiry date input css manage */
      display: flex;
     justify-content: space-between;
     width:90%;
 }
-.add-price{
+.add-price{                                                                                             /* add price css manage */
     display: flex;
     justify-content: space-between;
 }
-.minus-btn{
+.minus-btn{                                                                                           /* minus button css manage */
     background-color: rgba(5, 8, 8, 0.103);
     height: 20px;
     width: 22px;
 }
-.plus-btn{
+.plus-btn{                                                                                            /* plus button css manage */
     background-color: rgba(5, 8, 8, 0.103);
     height: 20px;
 }
-.product-quantity{
+.product-quantity{                                                                                  /* product quantity css manage */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-                                                /* history section */
-.history-section{
+                                                                                                        /* history section */
+.history-section{                                                                                   /* history section css manage */
     display: flex;
     justify-content: center;
-}
-.history-thead{
-    margin: 20px 5px 5px 5px;
 }
