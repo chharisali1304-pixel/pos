@@ -261,8 +261,8 @@ h1,h2,h3,h4,h5,h6{                                                              
 }
 .pay{                                                                                       /* right side bar pay button css manage */
     margin-top: 20px;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 5%;
     color: white;
     font-family: sans-serif;
     font-weight: 900;
@@ -280,21 +280,42 @@ h1,h2,h3,h4,h5,h6{                                                              
     background-color:#14467a;
      box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
+.block-pay{                                                                                       /* right side bar block pay button css manage */
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 900;
+    background-color: rgb(53, 185, 73);
+    border-radius: 20px;
+     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+.block-pay:hover{                                                                                /* right side bar pay button hover css manage */
+    transform: scale(1.051);
+    background-color:rgba(35, 153, 53, 0.952);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+.block-pay:active{                                                                              /* right side bar pay button active css manage */
+    background-color:rgba(80, 173, 94, 0.938);
+     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
                                                                                                         /* payment method section  */
 .pay-bar {                                                                                              /* payment bar css manage */
-   
     position: fixed;
     top: 0;
     right: 0;
-    width: 13%;
-    height: 92%;
+    width: 20%;
+    height: 62%;
     background-color: rgb(206, 199, 206);
     padding: 20px;
     margin:30px;
+    margin-top: 10%;
     border-radius: 10px;
-   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-     transform: translate(350px);
-   transition: all 0.3s ease-in;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: translate(550px);
+    transition: all 0.3s ease-in;
 }
 .cash-block{                                                                                            /* cash block css manage */
     display: flex;

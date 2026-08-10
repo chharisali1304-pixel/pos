@@ -15,9 +15,12 @@ let cashblock =  document.querySelector(".cash-block");                         
 let cashbtn =  document.querySelector(".cash-btn");                                                                          // cash button
 let cardbtn =  document.querySelector(".card-btn");                                                                         // card button
 let  customername = document.querySelector(".customer-name");                                                              // customer name
-
+let  payclose = document.querySelector(".pay-close");                                                                  // pay close button
  window.pricetotal = document.querySelector(".total-price");                                                            // total price
 
+ payclose.addEventListener("click",()=>{                                                                                   // pay close button add event listener
+    paybar.style.transform = "translate(550px)";                                                                                   // pay bar transform
+ })
 paybtn.addEventListener("click",() => {                                                                             // pay button add event listener
     ;
     if( pricetotal.innerHTML != 0)                                                                                          // if total price is not zero
@@ -44,7 +47,7 @@ paycash.addEventListener("click",()=>{                                          
      receiveprice.value = "";                                                                                             // receive price value
      customername.value = "";                                                                                            // customer name value
      returns.innerHTML = 0;                                                                                             // return price inner html
-     paybar.style.transform = "translate(350px)";                                                                      // pay bar transform
+     paybar.style.transform = "translate(550px)";                                                                      // pay bar transform
      alert("PAID");                                                                                                   // alert paid
       
  })
@@ -67,7 +70,7 @@ paycash.addEventListener("click",()=>{                                          
      totprice.innerText = 0;                                                                                           // total price inner text
      receiveprice.value = 0;                                                                                          // receive price value
      returns.innerHTML = 0;                                                                                          // return price inner html
-     paybar.style.transform = "translate(350px)";                                                                   // pay bar transform
+     paybar.style.transform = "translate(550px)";                                                                   // pay bar transform
      alert("PAID");                                                                                                // alert paid
       
  })
@@ -88,7 +91,7 @@ paycash.addEventListener("click",()=>{                                          
      paycash.addEventListener("click",()=>{                                                             // pay cash button add event listener
        
     if(holdername.value !== "" && cardnumber.value !== "" && expirydate.value !==  "" &&cvv.value !== ""){                      // if all fields are filled
-     paybar.style.transform = "translate(350px)";                                                                                           // pay bar transform
+     paybar.style.transform = "translate(550px)";                                                                                           // pay bar transform
      holdername.value  = "";                                                                                                               // holder name value
      cardnumber.value  = "";                                                                                                              // card number value
      expirydate.value  = "";                                                                                                             // expiry date value
