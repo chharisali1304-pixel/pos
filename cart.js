@@ -15,7 +15,7 @@ buttons.forEach((button,index) => {                                             
         let price = product.querySelector(".rolex-price").innerText;                              // get the product price
        
          addcart.innerHTML += `
-        <div class="card">                                                                     
+        <div class="card">
             <h4>${name} </h4>
             <div class ="add-price"><h3><span>${price}</span>$</h3>
             <div class="product-quantity"><button class="minus-btn">-</button>
