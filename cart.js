@@ -39,7 +39,11 @@ buttons.forEach((button,index) => {                                             
 
      minusbtn.addEventListener("click",()=>{                                                     // add event listener to minus button
             counter.innerHTML =  Number(counter.innerHTML) - 1;                                      // decrement the counter
-             pricetotal.innerText =  Number(pricetotal.innerText) - Number(price);                  // decrement the total price
+             pricetotal.innerText =  Number(pricetotal.innerText) - Number(price); 
+             if (Number(counter.innerHTML) === 0) {
+                 pricetotal.innerText =  Number(pricetotal.innerText) + Number(price);
+                 counter.innerHTML =  Number(counter.innerHTML) + 1;
+             }
         })
 
          pricetotal.innerHTML = currenttotal + currentprice;                                          // update the total price
@@ -55,8 +59,8 @@ buttons.forEach((button,index) => {                                             
        let card = e.target.closest(".card");                                                                       // get the closest card
        let currentPrice = Number(card.querySelector("span").innerText);                                           // get the current product price
        let currentTotal = Number(pricetotal.innerText);                                                          // get the current total price
-        pricetotal.innerText = currentTotal - currentPrice;                                                     // update the total price
-        localStorage.setItem("totalprice" , pricetotal.innerHTML);                                             // store the total price in local storage
+       pricetotal.innerText = currentTotal - currentPrice;                                                     // update the total price
+       localStorage.setItem("totalprice" , pricetotal.innerHTML);                                             // store the total price in local storage
     }
 });
 

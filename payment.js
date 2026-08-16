@@ -42,20 +42,20 @@ received.innerText =  receiveprice.value;                                       
 returns.innerHTML = received.innerText - totprice.innerText;                                                               // return price inner html
 
 paycash.addEventListener("click",()=>{                                                                        // pay cash button add event listener
-     localStorage.setItem("savehistory", `
+    localStorage.setItem("savehistory", `
     <td>${customername.value}</td>
     <td>Cash</td>
     <td>${received.innerText}</td>
     <td>${totprice.innerText}</td>`);
     console.log(localStorage.getItem("savehistory"));
-     received.innerText = 0;                                                                                                // received price inner text
-     totprice.innerText = 0;                                                                                               // total price inner text
-     receiveprice.value = "";                                                                                             // receive price value
-     customername.value = "";                                                                                            // customer name value
-     returns.innerHTML = 0;                                                                                             // return price inner html
-     paybar.style.transform = "translate(550px)";                                                                      // pay bar transform
-     alert("PAID");                                                                                                   // alert paid
-      historysave.innerHTML = window.localStorage.getItem("savehistory");
+    received.innerText = 0;                                                                                                // received price inner text
+    totprice.innerText = 0;                                                                                               // total price inner text
+    receiveprice.value = "";                                                                                             // receive price value
+    customername.value = "";                                                                                            // customer name value
+    returns.innerHTML = 0;                                                                                             // return price inner html
+    paybar.style.transform = "translate(550px)";                                                                      // pay bar transform
+    alert("PAID");                                                                                                   // alert paid
+    historysave.innerHTML = window.localStorage.getItem("savehistory");
  })
 })
                                                                  // history save inner html
@@ -71,7 +71,7 @@ cashbtn.addEventListener("click",()=>{                                          
     returns.innerHTML = received.innerText - totprice.innerText;                                                  // return price inner html
 
 paycash.addEventListener("click",()=>{                                                                    // pay cash button add event listener
-     historysave.style.width = "100%";                                                                                              // history save width 100%
+    historysave.style.width = "100%";                                                                                              // history save width 100%
     historysave.style.height = "100%";                                                                                            // history save height 100%
     historysave.innerHTML += `
     <td>${customername.value}</td>

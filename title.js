@@ -14,8 +14,8 @@ let arr = Array.from(titlebar);                                                 
   rolsection.style.display = "block";                                                     // rolex section show
   calsection.style.display = "none";                                                     // calvin section hide
   seisection.style.display = "none";                                                    // seiko section hide
- rol.style.backgroundColor="#14467a";                                                // rolex button background color
-            rol.style.color = "white";                                                // rolex button text color
+  rol.style.backgroundColor="#14467a";                                               // rolex button background color
+  rol.style.color = "white";                                                          // rolex button text color
  arr.forEach(titlebar => {                                                                      // loop through titlebar buttons
 
     titlebar.addEventListener("click",(e) => {                                                  // add event listener to each button
@@ -24,32 +24,32 @@ let arr = Array.from(titlebar);                                                 
          if(text == "ROLEX"){                                                                       // check if the text is "ROLEX"
             rol.style.backgroundColor="#14467a";                                                                  // set background color for rolex button
             rol.style.color = "white";                                                                             // set text color for rolex button
-                 sei.style.backgroundColor="white";                                                               // set background color for seiko button
+            sei.style.backgroundColor="white";                                                                    // set background color for seiko button
             sei.style.color = "black";                                                                           // set text color for seiko button
-             long.style.backgroundColor="white";                                                                // set background color for longines button
+            long.style.backgroundColor="white";                                                                 // set background color for longines button
             long.style.color = "black";                                                                        // set text color for longines button
-             cal.style.backgroundColor="white";                                                               // set background color for calvin button
+            cal.style.backgroundColor="white";                                                                // set background color for calvin button
             cal.style.color = "black";                                                                       // set text color for calvin button
             longsection.style.display = "none";                                                             // hide longines section
-             calsection.style.display = "none";                                                            // hide calvin section
-              seisection.style.display = "none";                                                          // hide seiko section
+            calsection.style.display = "none";                                                             // hide calvin section
+            seisection.style.display = "none";                                                            // hide seiko section
             rolsection.style.display = "block";                                                          // show rolex section
-             console.log("foreachroool")
+            console.log("foreachroool")
          }
          else if(text == "LONGINES"){                                                       // check if the text is "LONGINES"
-             long.style.backgroundColor="#14467a";                                                            // set background color for longines button
+            long.style.backgroundColor="#14467a";                                                             // set background color for longines button
             long.style.color = "white";                                                                        // set text color for longines button
-             rol.style.backgroundColor="white";                                                               // set background color for rolex button
+            rol.style.backgroundColor="white";                                                                // set background color for rolex button
             rol.style.color = "black";                                                                       // set text color for rolex button
-               sei.style.backgroundColor="white";                                                           // set background color for seiko button
+            sei.style.backgroundColor="white";                                                              // set background color for seiko button
             sei.style.color = "black";                                                                     // set text color for seiko button
-             cal.style.backgroundColor="white";                                                           // set background color for calvin button
+            cal.style.backgroundColor="white";                                                            // set background color for calvin button
             cal.style.color = "black";                                                                   // set text color for calvin button
-             longsection.style.display = "block";                                                       // show longines section
-             rolsection.style.display = "none";                                                        // hide rolex section
-               calsection.style.display = "none";                                                     // hide calvin section
-              seisection.style.display = "none";                                                     // hide seiko section
-              console.log("foreachlooon")
+            longsection.style.display = "block";                                                        // show longines section
+            rolsection.style.display = "none";                                                         // hide rolex section
+            calsection.style.display = "none";                                                        // hide calvin section
+            seisection.style.display = "none";                                                       // hide seiko section
+            console.log("foreachlooon")
         }
          else if(text == "CALVIN KLEIN"){                                                   // check if the text is "CALVIN KLEIN"
              cal.style.backgroundColor="#14467a";                                                          // set background color for calvin button
