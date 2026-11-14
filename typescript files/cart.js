@@ -1,4 +1,4 @@
-
+"use strict";
 let buttons = document.querySelectorAll(".plus"); // plus button
 let addcart = document.querySelector(".addcart"); // add to cart section
 let pricecount = document.querySelectorAll("span"); // price count
@@ -15,7 +15,7 @@ buttons.forEach((button, index) => {
             <div class ="add-price"><h3><span>${price}</span>$</h3>
             <div class="product-quantity"><button class="minus-btn">-</button>
             <h3 class="counter">1<h3><button class="plus-btn">+</button></div></div>
-            <img src="del.png" alt="del" class="del">
+            <img src="products/del.png" alt="del" class="del">
             <hr class="hr">
         </div>`;
         let card = addcart.lastElementChild; // get the last added card
@@ -51,4 +51,3 @@ addcart.addEventListener("click", (e) => {
         localStorage.setItem("totalprice", pricetotal.innerHTML); // store the total price in local storage
     }
 });
-//# sourceMappingURL=cart.js.map

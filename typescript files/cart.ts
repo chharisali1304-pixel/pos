@@ -20,7 +20,7 @@ buttons.forEach((button,index) => {                                             
             <div class ="add-price"><h3><span>${price}</span>$</h3>
             <div class="product-quantity"><button class="minus-btn">-</button>
             <h3 class="counter">1<h3><button class="plus-btn">+</button></div></div>
-            <img src="del.png" alt="del" class="del">
+            <img src="products/del.png" alt="del" class="del">
             <hr class="hr">
         </div>`;
          
