@@ -1,11 +1,14 @@
-let sidebarmainbtn = document.querySelector(".main");                                                                 // main button
-let sidebarhistorybtn = document.querySelector(".history");                                                          // history button
-let producttitle = document.querySelector(".product-title");                                                        // product title
-let rolexsection = document.querySelector(".rolex-section");                                                       // rolex section
-let longinesection = document.querySelector(".longines-section");                                                 // longines section
-let calvinsection = document.querySelector(".calvin-section");                                                   // calvin section
-let seikosection = document.querySelector(".seiko-section");                                                    // seiko section
-let historysection =  document.querySelector(".history-section");                                              // history section
+let sidebarmainbtn = document.querySelector<HTMLInputElement>(".main")!;                                                                 // main button
+let sidebarhistorybtn = document.querySelector<HTMLInputElement>(".history")!;                                                          // history button
+let producttitle = document.querySelector<HTMLInputElement>(".product-title")!;                                                        // product title
+let rolexsection = document.querySelector<HTMLInputElement>(".rolex-section")!;                                                       // rolex section
+let longinesection = document.querySelector<HTMLInputElement>(".longines-section")!;                                                 // longines section
+let calvinsection = document.querySelector<HTMLInputElement>(".calvin-section")!;                                                   // calvin section
+let seikosection = document.querySelector<HTMLInputElement>(".seiko-section")!;                                                    // seiko section
+let historysection =  document.querySelector<HTMLInputElement>(".history-section")!;                                              // history section
+
+
+
 
   sidebarmainbtn.style.backgroundColor = "#a9c6e4";                                                            // main button background color
   historysection.style.display = "none";                                                                        // history section display none
@@ -20,7 +23,7 @@ let historysection =  document.querySelector(".history-section");               
     calvinsection.style.display = "none";                                                                          // calvin section display none
     seikosection.style.display = "none";                                                                          // seiko section display none
     historysection.style.display ="flex";                                                                        // history section display flex
-    historysection.style.justify = "center";                                                                    // history section justify center
+    historysection.style.justifyContent = "center";                                                             // history section justify center
   })
 
   sidebarmainbtn.addEventListener("click",()=>{                                                              // main button add event listener
@@ -30,8 +33,8 @@ let historysection =  document.querySelector(".history-section");               
     producttitle.style.display = "block";                                                                               //product title display block
     historysection.style.display = "none";                                                                             //history section display none
     rolexsection.style.display = "block";                                                                             //rolex section display block
-    producttitle.style.margin.top = "2%";                                                                            //product title margin top 2%
+    producttitle.style.marginTop = "2%";                                                                             //product title margin top 2%
     producttitle.style.display = "flex";                                                                            //product title display flex
-    producttitle.style.justify = "center";                                                                         //product title justify center
+    producttitle.style.justifyContent = "center";                                                                  //product title justify center
     producttitle.style.width = "100%";                                                                            //product title width 100%
   })
