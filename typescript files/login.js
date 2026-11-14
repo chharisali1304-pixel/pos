@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const register = document.querySelector(".login-btn1");
 const login = document.querySelector(".login-btn2");
 const title = document.querySelector(".login-header h1");

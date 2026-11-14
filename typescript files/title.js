@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let titlebar = document.querySelectorAll(".title-btn"); // title bar buttons
 let rolsection = document.querySelector(".rolex-section"); // rolex section
 let longsection = document.querySelector(".longines-section"); // longines section

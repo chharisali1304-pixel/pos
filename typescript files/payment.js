@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let paybtn = document.querySelector(".pay"); // pay button
 let paybar = document.querySelector(".pay-bar"); // pay bar
 let receiveprice = document.querySelector(".receiveprice"); // receive price

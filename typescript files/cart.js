@@ -1,5 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+
 let buttons = document.querySelectorAll(".plus"); // plus button
 let addcart = document.querySelector(".addcart"); // add to cart section
 let pricecount = document.querySelectorAll("span"); // price count

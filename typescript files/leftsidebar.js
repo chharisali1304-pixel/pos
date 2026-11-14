@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let sidebarmainbtn = document.querySelector(".main"); // main button
 let sidebarhistorybtn = document.querySelector(".history"); // history button
 let producttitle = document.querySelector(".product-title"); // product title
