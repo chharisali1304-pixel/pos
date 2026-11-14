@@ -38,3 +38,12 @@ let historysection =  document.querySelector<HTMLInputElement>(".history-section
     producttitle.style.justifyContent = "center";                                                                  //product title justify center
     producttitle.style.width = "100%";                                                                            //product title width 100%
   })
+
+  const logoutBtn = document.querySelector(".logout-btn")!;
+
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("isLoggedIn");
+    sessionStorage.removeItem("isLoggedIn");
+
+    window.location.href = "login.html";
+});

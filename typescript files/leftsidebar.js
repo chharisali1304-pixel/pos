@@ -1,3 +1,4 @@
+"use strict";
 let sidebarmainbtn = document.querySelector(".main"); // main button
 let sidebarhistorybtn = document.querySelector(".history"); // history button
 let producttitle = document.querySelector(".product-title"); // product title
@@ -31,4 +32,9 @@ sidebarmainbtn.addEventListener("click", () => {
     producttitle.style.justifyContent = "center"; //product title justify center
     producttitle.style.width = "100%"; //product title width 100%
 });
-//# sourceMappingURL=leftsidebar.js.map
+const logoutBtn = document.querySelector(".logout-btn");
+logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("isLoggedIn");
+    sessionStorage.removeItem("isLoggedIn");
+    window.location.href = "login.html";
+});
