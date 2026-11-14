@@ -18,7 +18,7 @@ rol.style.backgroundColor = "#14467a"; // rolex button background color
 rol.style.color = "white"; // rolex button text color
 arr.forEach(titlebar => {
     titlebar.addEventListener("click", (e) => {
-        const text = e.target.textContent.trim(); // get the text content of the clicked button and trim whitespace
+        const text = e.target.textContent?.trim() ?? ""; // get the text content of the clicked button and trim whitespace
         if (text == "ROLEX") { // check if the text is "ROLEX"
             rol.style.backgroundColor = "#14467a"; // set background color for rolex button
             rol.style.color = "white"; // set text color for rolex button

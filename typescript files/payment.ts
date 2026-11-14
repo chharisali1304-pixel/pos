@@ -1,33 +1,35 @@
-let paybtn = document.querySelector(".pay");                                                                                               // pay button
-let paybar = document.querySelector(".pay-bar");                                                                                          // pay bar
-let receiveprice = document.querySelector(".receiveprice");                                                                              // receive price
-let received = document.querySelector(".received");                                                                                     // received price
-let confirmbtn = document.querySelector(".confirm-details");                                                                           // confirm button
-let totprice = document.querySelector(".tot-price");                                                                                  // total price
-let returns = document.querySelector(".return");                                                                                     // return price
-let paycash = document.querySelector(".pay-cash");                                                                                  // pay cash button
-let holdername = document.querySelector(".holder-name");                                                                           // holder name
-let cardnumber = document.querySelector(".card-number");                                                                          // card number
-let expirydate = document.querySelector(".date");                                                                                // expiry date
-let cvv = document.querySelector(".cvv");                                                                                       // cvv
-let cardblock =  document.querySelector(".card-block");                                                                        // card block
-let cashblock =  document.querySelector(".cash-block");                                                                       // cash block
-let cashbtn =  document.querySelector(".cash-btn");                                                                          // cash button
-let cardbtn =  document.querySelector(".card-btn");                                                                         // card button
-let  customername = document.querySelector(".customer-name");                                                              // customer name
-let  payclose = document.querySelector(".pay-close");                                                                     // pay close button
-let historysave = document.querySelector(".history-tr");                                                                 // history save
- window.pricetotal = document.querySelector(".total-price");                                                           // total price
+
+let paybtn = document.querySelector<HTMLButtonElement>(".pay")!;                                                                                               // pay button
+let paybar = document.querySelector<HTMLElement>(".pay-bar")!;                                                                                          // pay bar
+let receiveprice = document.querySelector<HTMLInputElement>(".receiveprice")!;                                                                              // receive price
+let received = document.querySelector<HTMLDivElement>(".received")!;                                                                                     // received price
+let confirmbtn = document.querySelector<HTMLButtonElement>(".confirm-details")!;                                                                           // confirm button
+let totprice = document.querySelector<HTMLDivElement>(".tot-price")!;                                                                                  // total price
+let returns = document.querySelector<HTMLDivElement>(".return")!;                                                                                     // return price
+let paycash = document.querySelector<HTMLButtonElement>(".pay-cash")!;                                                                                  // pay cash button
+let holdername = document.querySelector<HTMLInputElement>(".holder-name")!;                                                                           // holder name
+let cardnumber = document.querySelector<HTMLInputElement>(".card-number")!;                                                                          // card number
+let expirydate = document.querySelector<HTMLInputElement>(".date")!;                                                                                // expiry date
+let cvv = document.querySelector<HTMLInputElement>(".cvv")!;                                                                                       // cvv
+let cardblock =  document.querySelector<HTMLDivElement>(".card-block")!;                                                                        // card block
+let cashblock =  document.querySelector<HTMLDivElement>(".cash-block")!;                                                                       // cash block
+let cashbtn =  document.querySelector<HTMLButtonElement>(".cash-btn")!;                                                                          // cash button
+let cardbtn =  document.querySelector<HTMLButtonElement>(".card-btn")!;                                                                         // card button
+let  customername = document.querySelector<HTMLInputElement>(".customer-name")!;                                                              // customer name
+let  payclose = document.querySelector<HTMLButtonElement>(".pay-close")!;                                                                     // pay close button
+let historysave = document.querySelector<HTMLTableRowElement>(".history-tr")!;                                                                 // history save
+let typedWindow = window as unknown as Window & { pricetotal: HTMLDivElement };
+ typedWindow.pricetotal = document.querySelector<HTMLDivElement>(".total-price")!;                                                           // total price
 
  payclose.addEventListener("click",()=>{                                                                                   // pay close button add event listener
     paybar.style.transform = "translate(550px)";                                                                                   // pay bar transform
  })
 paybtn.addEventListener("click",() => {                                                                             // pay button add event listener
     ;
-    if( pricetotal.innerHTML != 0)                                                                                          // if total price is not zero
+    if( Number(typedWindow.pricetotal.innerHTML) != 0)                                                                                          // if total price is not zero
     {
      paybar.style.transform = "translate(0px)";                                                                                     // pay bar transform
-     totprice.innerText = window.localStorage.getItem("totalprice");                                                               // total price inner text
+     totprice.innerText = window.localStorage.getItem("totalprice") ?? "";                                                               // total price inner text
     }
     else{                                                                                                                   // if total price is zero
         alert("Please Add Product");
@@ -39,7 +41,7 @@ cardblock.style.display = "none";                                               
 
 confirmbtn.addEventListener("click",()=>{                                                                       // confirm button add event listener
 received.innerText =  receiveprice.value;                                                                                   // received price inner text
-returns.innerHTML = received.innerText - totprice.innerText;                                                               // return price inner html
+returns.innerHTML = String(Number(received.innerText) - Number(totprice.innerText));                                                               // return price inner html
 
 paycash.addEventListener("click",()=>{                                                                        // pay cash button add event listener
     localStorage.setItem("savehistory", `
@@ -48,14 +50,14 @@ paycash.addEventListener("click",()=>{                                          
     <td>${received.innerText}</td>
     <td>${totprice.innerText}</td>`);
     console.log(localStorage.getItem("savehistory"));
-    received.innerText = 0;                                                                                                // received price inner text
-    totprice.innerText = 0;                                                                                               // total price inner text
+    received.innerText = "0";                                                                                                // received price inner text
+    totprice.innerText = "0";                                                                                               // total price inner text
     receiveprice.value = "";                                                                                             // receive price value
     customername.value = "";                                                                                            // customer name value
-    returns.innerHTML = 0;                                                                                             // return price inner html
+    returns.innerHTML = "0";                                                                                             // return price inner html
     paybar.style.transform = "translate(550px)";                                                                      // pay bar transform
     alert("PAID");                                                                                                   // alert paid
-    historysave.innerHTML = window.localStorage.getItem("savehistory");
+    historysave.innerHTML = window.localStorage.getItem("savehistory") ?? "";
  })
 })
                                                                  // history save inner html
@@ -68,7 +70,7 @@ cashbtn.addEventListener("click",()=>{                                          
     cashblock.style.display = "block";                                                                               // cash block display block
     confirmbtn.addEventListener("click",()=>{                                                                       // confirm button add event listener
     received.innerText =  receiveprice.value;                                                                      // received price inner text
-    returns.innerHTML = received.innerText - totprice.innerText;                                                  // return price inner html
+    returns.innerHTML = String(Number(received.innerText) - Number(totprice.innerText));                                                  // return price inner html
 
 paycash.addEventListener("click",()=>{                                                                    // pay cash button add event listener
     historysave.style.width = "100%";                                                                                              // history save width 100%
@@ -79,10 +81,10 @@ paycash.addEventListener("click",()=>{                                          
     <td>${received.innerText}</td>
     <td>${returns.innerHTML}</td>`;
     console.log(historysave.innerHTML);
-    received.innerText = 0;                                                                                            // received price inner text
-    totprice.innerText = 0;                                                                                           // total price inner text
-    receiveprice.value = 0;                                                                                          // receive price value
-    returns.innerHTML = 0;                                                                                          // return price inner html
+    received.innerText = "0";                                                                                            // received price inner text
+    totprice.innerText = "0";                                                                                           // total price inner text
+    receiveprice.value = "0";                                                                                          // receive price value
+    returns.innerHTML = "0";                                                                                          // return price inner html
     paybar.style.transform = "translate(550px)";                                                                   // pay bar transform
     alert("PAID");                
    
@@ -117,5 +119,3 @@ paycash.addEventListener("click",()=>{                                          
    })
 
  })
-
-

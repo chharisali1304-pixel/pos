@@ -19,16 +19,17 @@ let cardbtn = document.querySelector(".card-btn"); // card button
 let customername = document.querySelector(".customer-name"); // customer name
 let payclose = document.querySelector(".pay-close"); // pay close button
 let historysave = document.querySelector(".history-tr"); // history save
-window.pricetotal = document.querySelector(".total-price"); // total price
+let typedWindow = window;
+typedWindow.pricetotal = document.querySelector(".total-price"); // total price
 payclose.addEventListener("click", () => {
     paybar.style.transform = "translate(550px)"; // pay bar transform
 });
 paybtn.addEventListener("click", () => {
     ;
-    if (pricetotal.innerHTML != 0) // if total price is not zero
+    if (Number(typedWindow.pricetotal.innerHTML) != 0) // if total price is not zero
      {
         paybar.style.transform = "translate(0px)"; // pay bar transform
-        totprice.innerText = window.localStorage.getItem("totalprice"); // total price inner text
+        totprice.innerText = window.localStorage.getItem("totalprice") ?? ""; // total price inner text
     }
     else { // if total price is zero
         alert("Please Add Product");
@@ -37,7 +38,7 @@ paybtn.addEventListener("click", () => {
 cardblock.style.display = "none"; // card block display none
 confirmbtn.addEventListener("click", () => {
     received.innerText = receiveprice.value; // received price inner text
-    returns.innerHTML = received.innerText - totprice.innerText; // return price inner html
+    returns.innerHTML = String(Number(received.innerText) - Number(totprice.innerText)); // return price inner html
     paycash.addEventListener("click", () => {
         localStorage.setItem("savehistory", `
     <td>${customername.value}</td>
@@ -45,14 +46,14 @@ confirmbtn.addEventListener("click", () => {
     <td>${received.innerText}</td>
     <td>${totprice.innerText}</td>`);
         console.log(localStorage.getItem("savehistory"));
-        received.innerText = 0; // received price inner text
-        totprice.innerText = 0; // total price inner text
+        received.innerText = "0"; // received price inner text
+        totprice.innerText = "0"; // total price inner text
         receiveprice.value = ""; // receive price value
         customername.value = ""; // customer name value
-        returns.innerHTML = 0; // return price inner html
+        returns.innerHTML = "0"; // return price inner html
         paybar.style.transform = "translate(550px)"; // pay bar transform
         alert("PAID"); // alert paid
-        historysave.innerHTML = window.localStorage.getItem("savehistory");
+        historysave.innerHTML = window.localStorage.getItem("savehistory") ?? "";
     });
 });
 // history save inner html
@@ -65,7 +66,7 @@ cashbtn.addEventListener("click", () => {
     cashblock.style.display = "block"; // cash block display block
     confirmbtn.addEventListener("click", () => {
         received.innerText = receiveprice.value; // received price inner text
-        returns.innerHTML = received.innerText - totprice.innerText; // return price inner html
+        returns.innerHTML = String(Number(received.innerText) - Number(totprice.innerText)); // return price inner html
         paycash.addEventListener("click", () => {
             historysave.style.width = "100%"; // history save width 100%
             historysave.style.height = "100%"; // history save height 100%
@@ -75,10 +76,10 @@ cashbtn.addEventListener("click", () => {
     <td>${received.innerText}</td>
     <td>${returns.innerHTML}</td>`;
             console.log(historysave.innerHTML);
-            received.innerText = 0; // received price inner text
-            totprice.innerText = 0; // total price inner text
-            receiveprice.value = 0; // receive price value
-            returns.innerHTML = 0; // return price inner html
+            received.innerText = "0"; // received price inner text
+            totprice.innerText = "0"; // total price inner text
+            receiveprice.value = "0"; // receive price value
+            returns.innerHTML = "0"; // return price inner html
             paybar.style.transform = "translate(550px)"; // pay bar transform
             alert("PAID");
         });

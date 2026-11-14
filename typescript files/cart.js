@@ -4,7 +4,7 @@ let buttons = document.querySelectorAll(".plus"); // plus button
 let addcart = document.querySelector(".addcart"); // add to cart section
 let pricecount = document.querySelectorAll("span"); // price count
 let pricetotal = document.querySelector(".total-price"); // total price
-let pricecounter; // price counter
+// price counter
 buttons.forEach((button, index) => {
     button.addEventListener("click", () => {
         let product = button.closest(".rolex-container"); // get the closest product container

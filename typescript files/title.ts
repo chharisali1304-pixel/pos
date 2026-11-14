@@ -1,12 +1,12 @@
-let titlebar = document.querySelectorAll(".title-btn");                                         // title bar buttons
-let rolsection = document.querySelector(".rolex-section");                                     // rolex section
-let longsection = document.querySelector(".longines-section");                                // longines section
-let calsection = document.querySelector(".calvin-section");                                  // calvin section
-let seisection = document.querySelector(".seiko-section");                                  // seiko section
-let rol = document.querySelector(".ti1");                                                  // rolex button
-let long = document.querySelector(".ti2");                                                // longines button
-let cal = document.querySelector(".ti3");                                                // calvin button
-let sei = document.querySelector(".ti4");                                               // seiko button
+let titlebar = document.querySelectorAll<HTMLButtonElement>(".title-btn")!;                                         // title bar buttons
+let rolsection = document.querySelector<HTMLButtonElement>(".rolex-section")!;                                     // rolex section
+let longsection = document.querySelector<HTMLDivElement>(".longines-section")!;                                // longines section
+let calsection = document.querySelector<HTMLDivElement>(".calvin-section")!;                                  // calvin section
+let seisection = document.querySelector<HTMLDivElement>(".seiko-section")!;                                  // seiko section
+let rol = document.querySelector<HTMLButtonElement>(".ti1")!;                                                  // rolex button
+let long = document.querySelector<HTMLButtonElement>(".ti2")!;                                                // longines button
+let cal = document.querySelector<HTMLButtonElement>(".ti3")!;                                                // calvin button
+let sei = document.querySelector<HTMLButtonElement>(".ti4")!;                                               // seiko button
 
 let arr = Array.from(titlebar);                                                      // convert nodelist to array
 
@@ -20,7 +20,7 @@ let arr = Array.from(titlebar);                                                 
 
     titlebar.addEventListener("click",(e) => {                                                  // add event listener to each button
 
-        const text = e.target.textContent.trim();                                        // get the text content of the clicked button and trim whitespace
+       const text = (e.target as HTMLElement).textContent?.trim() ?? "";                                       // get the text content of the clicked button and trim whitespace
          if(text == "ROLEX"){                                                                       // check if the text is "ROLEX"
             rol.style.backgroundColor="#14467a";                                                                  // set background color for rolex button
             rol.style.color = "white";                                                                             // set text color for rolex button
@@ -82,7 +82,7 @@ let arr = Array.from(titlebar);                                                 
         }
     })
 });
-let logout = document.querySelector(".siz");                                                          // logout button
+let logout = document.querySelector(".siz")!;                                                          // logout button
 logout.addEventListener("click" ,() =>{                                                   // add event listener to logout button
   console.log("ygyg")
  
