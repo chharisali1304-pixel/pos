@@ -3,7 +3,7 @@ let buttons = document.querySelectorAll<HTMLButtonElement>(".plus")!;           
 let addcart = document.querySelector<HTMLDivElement>(".addcart")!;                                                         // add to cart section
  let pricecount = document.querySelectorAll<HTMLSpanElement>("span")!;                                                    // price count
  let pricetotal = document.querySelector<HTMLDivElement>(".total-price")!;                                               // total price
- let pricecounter;                                                                                  // price counter
+                                                                               // price counter
 
 
 

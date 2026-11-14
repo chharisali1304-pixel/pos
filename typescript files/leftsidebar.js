@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 let sidebarmainbtn = document.querySelector(".main"); // main button
 let sidebarhistorybtn = document.querySelector(".history"); // history button
 let producttitle = document.querySelector(".product-title"); // product title
@@ -32,3 +33,4 @@ sidebarmainbtn.addEventListener("click", () => {
     producttitle.style.justifyContent = "center"; //product title justify center
     producttitle.style.width = "100%"; //product title width 100%
 });
+//# sourceMappingURL=leftsidebar.js.map
